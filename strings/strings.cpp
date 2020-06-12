@@ -1,10 +1,8 @@
 ﻿#include <iostream>
 #include <stdlib.h>
-#include <string>
 #include <cmath>
 #include "Header.h"
 
-//tets
 
 using namespace std;
 
@@ -12,8 +10,10 @@ using namespace std;
 
 int main()
 {
+    //variables
     int ch;
     string q15, q15A, q15B, q15C, q15D;
+    //this do-while loop is for execution of the program
     do
     {
         ch = displayMenu();

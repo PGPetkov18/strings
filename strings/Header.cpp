@@ -1,29 +1,26 @@
 ﻿#include <iostream>
-#include <stdlib.h>
-#include <string>
+#include <stdlib.h> //used for the function exit()
 #include <cmath>
 #include "Header.h"
 using namespace std;
 
+//global variables that are used in question's functions.
 int yourbalance = 0;
 int guaranteed1 = 1000;
 int guaranteed2 = 32000;
 char answer;
 
-void gameGreetings()
+void gameGreetings()//function that greets you when you start playing
 {
     string name;
     cout << "Enter your name: ";
     cin >> name;
-    cout << endl;
-    cout << "Welcome " << name << " to Who Wants to Be a Millionaire!" << endl;
-    cout << "Introducing your host Borislav." << endl;
-    cout << endl;
-    cout << "Now let's start playing the game!" << endl;
-    cout << endl;
+    cout << "Welcome " << name << " to Who Wants to Be a Millionaire!" << endl << endl;//double endl is used to put an extra line of space
+    cout << "Introducing your host Borislav." << endl << endl;
+    cout << "Now let's start playing the game!" << endl << endl;
 }
 
-char displayMenu()
+char displayMenu()// menu function
 {
     char choice;
     cout << "|----------MENU----------|" << endl;
@@ -34,7 +31,7 @@ char displayMenu()
     return choice;
 }
 
-void q1(string q1, string q1A, string q1B, string q1C, string q1D)
+void q1(string q1, string q1A, string q1B, string q1C, string q1D)//function for question1
 {
     q1 = "1. In which languages is the UEFA Champions League theme song in?";
     q1A = "A. English, French and German";
@@ -52,17 +49,17 @@ void q1(string q1, string q1A, string q1B, string q1C, string q1D)
         cout << "Correct!" << endl << endl;
         cout << "The lyrics are a mix of UEFA's three official languages: English, French and German." << endl << endl;
         yourbalance = yourbalance + 100;
-        cout << "Congratulations you won " << yourbalance << "£ " << endl << endl;
+        cout << "Congratulations you won " << yourbalance << "$ " << endl << endl;
     }
     else
     {
         cout << "Sad to say but you answered incorrectly and you didnt win anything" << endl << endl;
         cout << "Thanks for playing!" << endl;
-        exit(0);
+        exit(0);//function - terminates the program
     }
 }
 
-void q2(string q2, string q2A, string q2B, string q2C, string q2D)
+void q2(string q2, string q2A, string q2B, string q2C, string q2D)////function for question 2
 {
     q2 = "2. How many municipalities are in Bulgaria ?";
     q2A = "A. 27";
@@ -91,7 +88,7 @@ void q2(string q2, string q2A, string q2B, string q2C, string q2D)
     }
 }
 
-void q3(string q3, string q3A, string q3B, string q3C, string q3D)
+void q3(string q3, string q3A, string q3B, string q3C, string q3D)//function for question 3
 {
     q3 = "3. What is the capital city of Barbados ?";
     q3A = "A. Bridgetown";
@@ -120,7 +117,7 @@ void q3(string q3, string q3A, string q3B, string q3C, string q3D)
     }
 }
 
-void q4(string q4, string q4A, string q4B, string q4C, string q4D)
+void q4(string q4, string q4A, string q4B, string q4C, string q4D)//function for question 4
 {
     q4 = "4. What is the Pythagorean Theorem solving for leg(a) ?";
     q4A = "A. a=c2+b2";
@@ -151,7 +148,7 @@ void q4(string q4, string q4A, string q4B, string q4C, string q4D)
 
 
 
-void q6(string q6, string q6A, string q6B, string q6C, string q6D)
+void q6(string q6, string q6A, string q6B, string q6C, string q6D)//function for question 6
 {
     q6 = "6. Which is the most expensive car?";
     q6A = "A. Bugatti La Voiture Noire";
@@ -180,7 +177,7 @@ void q6(string q6, string q6A, string q6B, string q6C, string q6D)
     }
 }
 
-void q7(string q7, string q7A, string q7B, string q7C, string q7D)
+void q7(string q7, string q7A, string q7B, string q7C, string q7D)//function for question 7
 {
     q7 = "7. How old was the oldest man?";
     q7A = "A. 122 years";
@@ -210,7 +207,7 @@ void q7(string q7, string q7A, string q7B, string q7C, string q7D)
 
 }
 
-void q8(string q8, string q8A, string q8B, string q8C, string q8D)
+void q8(string q8, string q8A, string q8B, string q8C, string q8D)//function for question 8
 {
     q8 = "8. What is the area of ​​Bulgaria";
     q8A = "A. 110 000 km";
@@ -241,7 +238,7 @@ void q8(string q8, string q8A, string q8B, string q8C, string q8D)
 }
 
 
-void q9(string q9, string q9A, string q9B, string q9C, string q9D)
+void q9(string q9, string q9A, string q9B, string q9C, string q9D)//function for question 9
 {
     q9 = "9. Which is the largest country?";
     q9A = "A. USA";
@@ -264,21 +261,21 @@ void q9(string q9, string q9A, string q9B, string q9C, string q9D)
     }
     else
     {
-        cout << "Unfortunately your answer was wrong and your prize is " << guaranteed1 << "£ " << endl << endl;
+        cout << "Unfortunately your answer was wrong and your prize is " << guaranteed1 << "$ " << endl << endl;
         cout << "Thanks for playing!" << endl;
         exit(0);
     }
 
 }
 
-void q11(string q11, string q11A, string q11B, string q11C, string q11D)
+void q11(string q11, string q11A, string q11B, string q11C, string q11D)//function for question 11
 {
     q11 = "11. Which insect shorted out an early supercomputer and inspired the term computer bug?";
     q11A = "A. Moth";
     q11B = "B. Roach";
     q11C = "C. Fly";
     q11D = "D. Japanese beetle";
-    cout << "Now you have to answer a question for 64000£" << endl << endl;
+    cout << "Now you have to answer a question for 64000$" << endl << endl;
     cout << q11 << endl;
     cout << q11A << endl;
     cout << q11B << endl;
@@ -292,24 +289,24 @@ void q11(string q11, string q11A, string q11B, string q11C, string q11D)
         cout << "Moth was found inside the computer of scientist Grace Hopper." << endl << endl;
         yourbalance = guaranteed2 * 2;
         cout << endl;
-        cout << "You have " << yourbalance << "£ " << endl << endl;
+        cout << "You have " << yourbalance << "$ " << endl << endl;
     }
     else
     {
-        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "£ " << endl << endl;
+        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "$ " << endl << endl;
         cout << "Thanks for playing!" << endl;
         exit(0);
     }
 }
 
-void q12(string q12, string q12A, string q12B, string q12C, string q12D)
+void q12(string q12, string q12A, string q12B, string q12C, string q12D)//function for question 12
 {
     q12 = "12. In the children’s book series, where is Paddington Bear originally from?";
     q12A = "A. India";
     q12B = "B. Peru";
     q12C = "C. Iceland";
     q12D = "D. Canada";
-    cout << "Now you have to answer a question for 125000£" << endl << endl;
+    cout << "Now you have to answer a question for 125000$" << endl << endl;
     cout << q12 << endl;
     cout << q12A << endl;
     cout << q12B << endl;
@@ -321,25 +318,25 @@ void q12(string q12, string q12A, string q12B, string q12C, string q12D)
         cout << "Correct!" << endl << endl;
         cout << "Paddington was raised by his Aunt Lucy in Peru, after being orphaned due to an earthquake, according to Paddington's website." << endl << endl;
         yourbalance = guaranteed2 * 2 * 2 - 3000;
-        cout << "You have " << yourbalance << "£ " << endl << endl;
+        cout << "You have " << yourbalance << "$ " << endl << endl;
     }
     else
     {
-        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "£ " << endl << endl;
+        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "$ " << endl << endl;
         cout << "Thanks for playing!" << endl;
         exit(0);
     }
 
 }
 
-void q13(string q13, string q13A, string q13B, string q13C, string q13D)
+void q13(string q13, string q13A, string q13B, string q13C, string q13D)//function for question 13
 {
     q13 = "13. According to the Population Reference Bureau, what is the approximate number of people who have ever lived on earth?";
     q13A = "A. 50 billion";
     q13B = "B. 100 billion";
     q13C = "C. 1 trillion";
     q13D = "D. 5 trillion";
-    cout << "Now you have to answer a question for 250000£" << endl << endl;
+    cout << "Now you have to answer a question for 250000$" << endl << endl;
     cout << q13 << endl;
     cout << q13A << endl;
     cout << q13B << endl;
@@ -353,24 +350,24 @@ void q13(string q13, string q13A, string q13B, string q13C, string q13D)
         cout << "The total world's population in history was, at the time, estimated to be ... 100 billion." << endl;
         yourbalance = 250000;
         cout << endl;
-        cout << "You have " << yourbalance << "£ " << endl << endl;
+        cout << "You have " << yourbalance << "$ " << endl << endl;
     }
     else
     {
-        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "£ " << endl << endl;
+        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "$ " << endl << endl;
         cout << "Thanks for playing!" << endl;
         exit(0);
     }
 }
 
-void q14(string q14, string q14A, string q14B, string q14C, string q14D)
+void q14(string q14, string q14A, string q14B, string q14C, string q14D)//function for question 14
 {
     q14 = "14. Who is credited with inventing the first mass-produced helicopter?";
     q14A = "A. Ferdinand von Zeppelin";
     q14B = "B. Elmer Sperry";
     q14C = "C. Igor Sikorsky";
     q14D = "D. Gottlieb Daimler";
-    cout << "Now you have to answer a question for 500000£" << endl << endl;
+    cout << "Now you have to answer a question for 500000$" << endl << endl;
     cout << q14 << endl;
     cout << q14A << endl;
     cout << q14B << endl;
@@ -382,24 +379,24 @@ void q14(string q14, string q14A, string q14B, string q14C, string q14D)
         cout << "Correct!" << endl << endl;
         cout << "The first mass-produced helicopter was invented by ... Igor Sikorsky." << endl << endl;
         yourbalance = 500000;
-        cout << "You have " << yourbalance << "£ " << endl << endl;
+        cout << "You have " << yourbalance << "$ " << endl << endl;
     }
     else
     {
-        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "£ " << endl << endl;
+        cout << "Sadly, your answer was wrong but hey you still won " << guaranteed2 << "$ " << endl << endl;
         cout << "Thanks for playing!" << endl;
         exit(0);
     }
 }
 
-void q15(string q15, string q15A, string q15B, string q15C, string q15D)
+void q15(string q15, string q15A, string q15B, string q15C, string q15D)//function for question 15
 {
     q15 = "15. What letter must appear on the beginning of the registration number of all non-military aircraft in the US?";
     q15A = "A. N";
     q15B = "B. A";
     q15C = "C. U";
     q15D = "D. L";
-    cout << "You're playing for 1000000£ ! Good luck !" << endl << endl;
+    cout << "You're playing for 1000000$ ! Good luck !" << endl << endl;
     cout << q15 << endl;
     cout << q15A << endl;
     cout << q15B << endl;
@@ -416,21 +413,21 @@ void q15(string q15, string q15A, string q15B, string q15C, string q15D)
     }
     else
     {
-        cout << "You were so close to become a millionaire but sadly, your answer was wrong and you won 32000 " << "£ " << endl << endl;
+        cout << "You were so close to become a millionaire but sadly, your answer was wrong and you won 32000 " << "$ " << endl << endl;
         cout << "Thanks for playing!" << endl << endl;
         exit(0);
     }
 }
 
 
-void q10(string q10, string q10A, string q10B, string q10C, string q10D)
+void q10(string q10, string q10A, string q10B, string q10C, string q10D)//function for question 10
 {
     q10 = "10. What is the size of the moon?";
     q10A = "A. 1 500 km";
     q10B = "B. 1 200 km";
     q10C = "C. 1 700 km";
     q10D = "D. 1 000 km";
-    cout << "Now you have to answer a question for 32000£ - second guaranteed prize" << endl << endl;
+    cout << "Now you have to answer a question for 32000$ - second guaranteed prize" << endl << endl;
     cout << q10 << endl;
     cout << q10A << endl;
     cout << q10B << endl;
@@ -440,7 +437,7 @@ void q10(string q10, string q10A, string q10B, string q10C, string q10D)
     if (answer == 'C' || answer == 'c')
     {
         cout << "Correct!" << endl << endl;
-        cout << "Congratulations you won the second guaranteed prize " << guaranteed2 << "£ " << endl;
+        cout << "Congratulations you won the second guaranteed prize " << guaranteed2 << "$ " << endl;
         cout << endl;
         cout << "Do you want to continue?";
         string b;
@@ -461,20 +458,20 @@ void q10(string q10, string q10A, string q10B, string q10C, string q10D)
     }
     else
     {
-        cout << "Unfortunately your answer was wrong and your prize is " << guaranteed1 << "£ " << endl << endl;
+        cout << "Unfortunately your answer was wrong and your prize is " << guaranteed1 << "$ " << endl << endl;
         cout << "Thanks for playing!" << endl;
         exit(0);
     }
 }
 
-void q5(string q5, string q5A, string q5B, string q5C, string q5D)
+void q5(string q5, string q5A, string q5B, string q5C, string q5D)//function for question 5
 {
     q5 = "5. What is the most sold book ?";
     q5A = "A. Gulliver's Travels";
     q5B = "B. Frankenstein ";
     q5C = "C. The Bible";
     q5D = "D. Anna Karenina";
-    cout << "Now you have to answer a question for 1000£ - first guaranteed prize" << endl << endl;
+    cout << "Now you have to answer a question for 1000$ - first guaranteed prize" << endl << endl;
     cout << q5 << endl;
     cout << q5A << endl;
     cout << q5B << endl;
@@ -485,7 +482,7 @@ void q5(string q5, string q5A, string q5B, string q5C, string q5D)
     {
         cout << "Correct!" << endl << endl;
         cout << "According to Guinness World Records as of 1995, the Bible is the best-selling book of all time, with an estimated 5 billion copies sold and distributed." << endl << endl;
-        cout << "Congratulations you won the first guaranteed prize " << guaranteed1 << "£ " << endl << endl;
+        cout << "Congratulations you won the first guaranteed prize " << guaranteed1 << "$ " << endl << endl;
         cout << "Do you want to continue?";
         string a;
         cin >> a;
@@ -511,18 +508,19 @@ void q5(string q5, string q5A, string q5B, string q5C, string q5D)
     }
 }
 
-void choice1(int& choice, string& q15, string& q15A, string& q15B, string& q15C, string& q15D)
+void choice1(int& choice, string& q15, string& q15A, string& q15B, string& q15C, string& q15D)//function for your choice from the menu
 {
+    //variables for every rule
     string rulesAndInfo = "|------Rules and Info------|";
     string r1 = "1.Answer with Uppercase letters or lowercase letters";
     string r2 = "2.You have 3 Lifelines: Call a friend, 50/50 and skip question";//this is something that we will do in the future.
-    string r3{ "3.For question 1 you will win 100£\nFor question 2 you will win 200£\nFor question 3 you will win 300£\nFor question 4 you will win 500£\nFor question 5 you will win 1000£(first guaranteed prize)\nFor question 6 you will win 2000£\nFor question 7 you will win 4000£\nFor question 8 you will win 8000£\nFor question 9 you will win 16000£\nFor question 10 you will win 32000£(second guaranteed prize)\nFor question 11 you will win 64000£\nFor question 12 you will win 125000£\nFor question 13 you will win 250000£\nFor question 14 you will win 500000£\nFor question 15 you will win 1000000£" };
+    string r3{ "3.For question 1 you will win 100$\nFor question 2 you will win 200$\nFor question 3 you will win 300$\nFor question 4 you will win 500$\nFor question 5 you will win 1000$(first guaranteed prize)\nFor question 6 you will win 2000$\nFor question 7 you will win 4000$\nFor question 8 you will win 8000$\nFor question 9 you will win 16000$\nFor question 10 you will win 32000$(second guaranteed prize)\nFor question 11 you will win 64000$\nFor question 12 you will win 125000$\nFor question 13 you will win 250000$\nFor question 14 you will win 500000$\nFor question 15 you will win 1000000$" };
     string r4 = "4.After you answer a question correctly you get the prize that the question gives but if you answer the next question incorrectly you only get the guaranteed prize if you passed one";
     string r5 = "5.No cheating!";
 
     switch (choice)
     {
-    case '1':
+    case '1': //this case is for playing the game
         gameGreetings();
         q1(q15, q15A, q15B, q15C, q15D);
         q2(q15, q15A, q15B, q15C, q15D);
@@ -530,7 +528,7 @@ void choice1(int& choice, string& q15, string& q15A, string& q15B, string& q15C,
         q4(q15, q15A, q15B, q15C, q15D);
         q5(q15, q15A, q15B, q15C, q15D);
         break;
-    case '2':
+    case '2': //this case is for the rules
         cout << rulesAndInfo << endl;
         cout << r1 << endl;
         cout << r2 << endl;
@@ -539,7 +537,7 @@ void choice1(int& choice, string& q15, string& q15A, string& q15B, string& q15C,
         cout << r5 << endl;
         cout << rulesAndInfo << endl << endl;
         break;
-    case '3':
+    case '3': //this case terminates the program
         exit(0);
         break;
     }
